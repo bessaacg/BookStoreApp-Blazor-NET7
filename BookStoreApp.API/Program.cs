@@ -1,7 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Microsoft.EntityFrameworkCore;
+using BookStoreApp.API.Data;
 namespace BookStoreApp.API
-{
+{ 
     public class Program
     {
         public static void Main(string[] args)
@@ -10,6 +12,8 @@ namespace BookStoreApp.API
 
             // Add services to the container.
             builder.Services.AddControllers();
+            var conString = builder.Configuration.GetConnectionString("BookStoreAppDBConnection");
+            builder.Services.AddDbContext<BookStoreDBContext>(options => options.UseSqlServer(conString));
            
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
