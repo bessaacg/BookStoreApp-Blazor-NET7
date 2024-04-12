@@ -1,4 +1,5 @@
 ﻿using BookStoreApp.API.Models;
+using BookStoreApp.API.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApp.API.Data

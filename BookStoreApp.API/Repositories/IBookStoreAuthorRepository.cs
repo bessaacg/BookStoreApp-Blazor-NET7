@@ -1,4 +1,4 @@
-﻿using BookStoreApp.API.Models;
+﻿using BookStoreApp.API.Models.Domain;
 
 namespace BookStoreApp.API.Repositories
 {

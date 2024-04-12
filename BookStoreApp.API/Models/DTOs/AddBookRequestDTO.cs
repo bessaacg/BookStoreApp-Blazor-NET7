@@ -1,12 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
+﻿using BookStoreApp.API.Models.Domain;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookStoreApp.API.Models
+namespace BookStoreApp.API.Models.DTOs
 {
-    public class Book
+    public class AddBookRequestDTO
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public int Year { get; set; }
         public string ISBN { get; set; }
